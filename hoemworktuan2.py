@@ -69,10 +69,23 @@ else:
     print("x =", '%.2f' % x)
     print("y =", '%.2f' % y)
 a = float(input("nhập số giây: "))
-giờ = a // 3600
+giờ = a // 3600 
 phút = (a % 3600) // 60
 if a == 0 :
      print("không có thời gian")
 else : 
-    thời_gian  = giờ + phút
+    thời_gian  = f"{giờ}" + f"{phút}"
 print("thời gian là:", thời_gian)
+
+str_x = float(input("nhập điểm tâm x của hình tròn: "))
+str_y = float(input("nhập điểm tâm y của hình tròn: "))
+r = float(input("nhập bán kính r của hình tròn: "))
+str_x1 = float(input("nhập điểm x1 của điểm cần kiểm tra: "))
+str_y1 = float(input("nhập điểm y1 của điểm cần kiểm tra: "))
+khoảng_cách = (((str_x1-str_x))**2 + ((str_y1-str_y))**2)**0.5 - r
+if khoảng_cách < 0:
+    print("Điểm nằm trong hình tròn.")
+elif khoảng_cách == 0:
+    print("Điểm nằm trên đường tròn.")
+else:
+    print("Điểm nằm ngoài hình tròn.")
